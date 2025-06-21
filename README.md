@@ -1,0 +1,51 @@
+-- ================================================================
+-- DevifyX MySQL Assignment: Password Reset & Email Verification
+-- Author: [Varsha]
+-- File: devifyx-mysql-assignment-[varsha].sql
+-- Description:
+--   This SQL script implements a secure and efficient password recovery
+--   and email verification system using MySQL 8.0 only (no external code).
+--
+-- 🔧 Features Implemented:
+-- ---------------------------------------------------------------
+-- ✅ User Management:
+--    - Normalized user table with email, hashed password, verification status
+--
+-- ✅ Email Verification:
+--    - Token generation, expiry check, max usage (multi-use support)
+--    - Procedure to initiate and complete verification
+--
+-- ✅ Password Reset:
+--    - Secure reset tokens with expiry and multi-use logic
+--    - Reset procedure with safety checks
+--
+-- ✅ Token Generation Logic:
+--    - UUID-based unique token generator (MySQL FUNCTION)
+--
+-- ✅ Token Expiry & Management:
+--    - Validation inside logic
+--    - Auto-cleanup of expired entries (EVENT every 1 hour)
+--
+-- ✅ Audit Logging:
+--    - All key actions recorded in audit_log table
+--
+-- ⭐ Bonus Features:
+-- ---------------------------------------------------------------
+-- ✅ Rate Limiting: Max 3 requests/hour per action per user
+-- ✅ Multi-use Tokens: Controlled by max_uses field
+-- ✅ Auto Cleanup: Expired tokens and logs cleared periodically
+--
+-- 🧪 Sample Data & Usage:
+-- ---------------------------------------------------------------
+--  - INSERT statements for 2 test users
+--  - CALL examples provided for each procedure
+--
+-- 💡 Technical Notes:
+-- ---------------------------------------------------------------
+-- - Requires MySQL 8.0 or higher
+-- - Uses only MySQL features: tables, functions, procedures, events
+-- - No frontend or backend integration included
+--
+-- ✅ Ready for direct execution and testing.
+-- ==============================================================
+
